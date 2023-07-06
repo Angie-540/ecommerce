@@ -6,23 +6,24 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit{
+export class HomeComponent implements OnInit {
 
   productList: any [] = [];
   constructor(private productService: ProductService) {
   }
 
   ngOnInit(): void {
-    debugger;
     this.loadAllProducts();
     
   }
 
-  loadAllProducts() {
-    this.productService.getAllProducts().subscribe((result:any)=> {
+  loadAllProducts () {
+    this.productService.getAllProducts().subscribe((result:any)=>{
       this.productList = result.data;
 
     })
   }
+
+ 
 
 }
