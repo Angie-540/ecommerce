@@ -12,7 +12,7 @@ export class ProductService {
   }
 
   getAllProducts (): Observable<any[]> {
-    return this.http.get<any[]>("http://onlinetestapi.gerasim.in/api/Ecomm/GetAllProducts")
+    return this.http.get<any[]>("http://onlinetestapi.gerasim.in/api/Ecomm/GetAllProducts"); 
   }
 
 }
